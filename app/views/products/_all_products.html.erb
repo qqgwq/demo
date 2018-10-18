@@ -1,0 +1,35 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Price</th>
+      <th>Category</th>
+      <th>Status</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  
+  
+  <tbody>
+    <% @products.each_with_index do |product, index| %>
+      <tr id="product_<%= product.id %>">
+        <td><%= 1 + index %></td>
+        <td><%= product.name %></td>
+        <% if product.female? %>
+          <td width="1%"><i class="fa fa-female"></i></td>
+        <% else %>
+          <td width="1%"><i class="fa fa-male"></i></td>
+        <% end %>
+        <td><%= product.price %></td>
+        <td><%= product.category.name %></td>
+        <td><%= Product.human_state_name(product.state_name) %></td>
+        <td><%= link_to "Edit", edit_product_path(product) %></td>
+        <td><%= link_to "Destroy", product_path(product), method: :delete, remote: true %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

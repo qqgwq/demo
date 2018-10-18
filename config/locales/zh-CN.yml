@@ -1,0 +1,10 @@
+zh-CN:
+  activerecord:
+    state_machines:
+      product:
+        states:
+          pending: "待发送"
+          purchase: "已购买"
+          shipping: "运输中"
+          canceled: "已取消"
+            

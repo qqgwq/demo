@@ -1,0 +1,15 @@
+<div class="pull-right">
+  <%= form_tag products_path, method: :get, remote: true do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Submit" %>
+  <% end %> 
+</div>
+
+<div id="search_result">
+  <%= render 'all_products' %>
+</div>
+<div id="paginate" class="pull-right">
+  <%= paginate @products, remote: true %>
+</div>
+
+<%= link_to 'New Product', new_product_path, remote: true, id: "new_product" %>
