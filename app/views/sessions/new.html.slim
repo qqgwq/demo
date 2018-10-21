@@ -1,0 +1,19 @@
+.main
+  .container
+    .row
+      .col-md-6.col-md-offset-3
+        .panel
+          .panel-heading
+            .h1 登录
+          .panel-body
+            = form_tag(login_path, method: :post) do
+              .form-group
+                = label_tag :Name
+                = text_field_tag :name, params[:login_params], class: "form-control", placeholder: "姓名..."
+
+              .form-group
+                = label_tag :Password
+                = password_field_tag :password, nil, class: "form-control", placeholder: "密码..."
+
+              .form-group
+                = submit_tag "Login", class: "btn btn-success"

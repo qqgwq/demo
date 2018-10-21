@@ -19,3 +19,22 @@
  @import 'bootstrap-sprockets';
  @import 'bootstrap';
  @import "font-awesome";
+
+
+ body{
+   background: #e5e5e5;
+ }
+ .main{
+   margin-top: 5%;
+ }
+ .bd-navbar{
+   background: #FFF;
+ }
+ #search_result{
+   margin-top: 90px;
+   background: #FFF;
+ }
+ .show-product{
+  margin-top: 90px;
+  background: #FFF;
+ }

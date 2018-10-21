@@ -1,7 +1,4 @@
-class User
-  attr_accessor :name, :age
-  def initialize(name, age)
-    @name = name
-    @age = age
-  end
+class User < ActiveRecord::Base
+  has_secure_password
+  enum gender: ["female", "male"]
 end

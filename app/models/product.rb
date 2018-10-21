@@ -3,7 +3,7 @@ class Product < ActiveRecord::Base
   has_many :taggings
   has_many :tags, through: :taggings
   has_ancestry
-  enum gender: ["female", "male"]
+  has_many :cart_items
 
   state_machine :state, initial: :pending do
     event :purchase do

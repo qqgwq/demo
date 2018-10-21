@@ -1,0 +1,22 @@
+<table class="table table-bordered show-product">
+  <thead>
+    <tr>
+      <th>商品名</th>
+      <th>数量</th>
+      <th>总价</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @items.each do |item| %>
+      <tr>
+        <td><%= item.product.name %></td>
+        <td><%= item.quantity %></td>
+        <td><%= item.cart.total_price %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<div class="pull-right">
+  <%= link_to "清空购物车", clean_carts_path, method: :post %>
+</div>
+  

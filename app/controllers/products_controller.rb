@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :required_login
   def new
     @product = Product.new
     respond_to do |format|
@@ -57,6 +58,12 @@ class ProductsController < ApplicationController
       format.html {redirect_to @product}
       format.js 
     end
+  end
+
+  def add_to_cart
+    @product = Product.find(params[:id])
+    current_cart.add_product_to_cart(@product)
+    redirect_to carts_path
   end
 
   private

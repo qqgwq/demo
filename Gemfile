@@ -33,8 +33,10 @@ gem 'state_machine'
 gem 'state_machines-activerecord'
 gem "rails-i18n"
 gem "font-awesome-rails"
+gem 'slim'
+gem 'jquery-validation-rails'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

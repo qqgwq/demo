@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181007122349) do
+ActiveRecord::Schema.define(version: 20181020015507) do
+
+  create_table "cart_items", force: :cascade do |t|
+    t.integer  "product_id", limit: 4
+    t.integer  "cart_id",    limit: 4
+    t.integer  "quantity",   limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  add_index "cart_items", ["cart_id"], name: "index_cart_items_on_cart_id", using: :btree
+  add_index "cart_items", ["product_id"], name: "index_cart_items_on_product_id", using: :btree
+
+  create_table "carts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -36,7 +52,6 @@ ActiveRecord::Schema.define(version: 20181007122349) do
     t.string   "ancestry",     limit: 255
     t.string   "state",        limit: 255
     t.integer  "lock_version", limit: 4,                  default: 0, null: false
-    t.integer  "gender",       limit: 4,                  default: 0
   end
 
   add_index "products", ["ancestry"], name: "index_products_on_ancestry", using: :btree
@@ -58,6 +73,16 @@ ActiveRecord::Schema.define(version: 20181007122349) do
     t.datetime "updated_at",             null: false
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string   "name",            limit: 255
+    t.string   "password_digest", limit: 255
+    t.integer  "gender",          limit: 4,   default: 0, null: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
+  end
+
+  add_foreign_key "cart_items", "carts"
+  add_foreign_key "cart_items", "products"
   add_foreign_key "products", "categories"
   add_foreign_key "taggings", "products"
   add_foreign_key "taggings", "tags"
