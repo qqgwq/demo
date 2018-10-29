@@ -14,11 +14,12 @@
       <% if login? %>
         <li><%= link_to "Logout", "/logout", method: :delete %></li>
         <li>
-          <%= link_to cart_path do %>
+          <%= link_to cart_path(current_cart) do %>
             购物车<i class="fa fa-shopping-cart"></i>(<%= current_cart.cart_items.count %>)
           <% end %>
         </li>
       <% else %>
+        <li><%= link_to "Signup", signup_path %></li>
         <li><%= link_to "Login", login_path %></li>
       <% end %>
     </ul>

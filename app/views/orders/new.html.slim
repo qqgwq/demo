@@ -1,0 +1,20 @@
+.main
+  .container
+    .row
+      .col-md-6.col-md-offset-3
+        .panel
+          .panel-heading
+            h1 创建商品订单
+          .panel-body
+            = form_for Order.new do |f|
+              .form-group
+                = f.label :order_name, class: "label-control"
+                = f.text_field :order_name, class: "form-control"
+              .form-group
+                = f.label :order_address, class: "label-control"
+                = f.text_field :order_address, class: "form-control"
+              .form-group
+                = f.label :order_phone, class: "label-control"
+                = f.text_field :order_phone, class: "form-control"
+              .form-group
+                = f.submit "Create Order", class: "btn btn-success"

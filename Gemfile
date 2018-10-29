@@ -35,6 +35,7 @@ gem "rails-i18n"
 gem "font-awesome-rails"
 gem 'slim'
 gem 'jquery-validation-rails'
+gem 'carrierwave'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 

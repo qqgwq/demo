@@ -5,5 +5,9 @@
         .ul.list-group
           .li.list-group-item
             = @user.name
-          .li.list-group-item
-            = @user.gender
+          - if current_user.male?
+            .li.list-group-item
+              i.fa.fa-male
+          - else
+            .li.list-group-item
+              i.fa.fa-female

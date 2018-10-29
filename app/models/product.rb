@@ -4,6 +4,8 @@ class Product < ActiveRecord::Base
   has_many :tags, through: :taggings
   has_ancestry
   has_many :cart_items
+  has_many :order_items
+  mount_uploader :image, ImageUploader
 
   state_machine :state, initial: :pending do
     event :purchase do

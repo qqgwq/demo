@@ -10,6 +10,7 @@ class Cart < ActiveRecord::Base
     else
       @item = self.cart_items.new(product_id: product.id, quantity: 1)
       @item.save
+      product.purchase
     end
   end
 
