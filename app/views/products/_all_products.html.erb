@@ -1,30 +1,19 @@
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Name</th>
-      <th>Image</th>
-      <th>Price</th>
-      <th>Category</th>
-      <th>Status</th>
-      <th></th>
-    </tr>
-  </thead>
-  
-  
-  <tbody>
-    <% @products.each_with_index do |product, index| %>
-      <tr id=product_<%= product.id %>>
-        <td><%= 1 + index %></td>
-        <td><%= product.name %></td>
-        <td><%= image_tag(product.image.url, size: "100x100") %></td>
-        <td><%= product.price %></td>
-        <td><%= product.category.name %></td>
-        <td><%= Product.human_state_name(product.state_name) %>
-        <%#= link_to "Edit", edit_product_path(product) %>
-        <%#= link_to "Destroy", product_path(product), method: :delete, remote: true %></td>
-        <td><%= link_to "添加到购物车", add_to_cart_product_path(product), method: :post %></td>
-      </tr>
+<% @products.each do |product| %>
+  <div class="product">
+    <%= link_to product_path(product) do %>
+      <%= image_tag(product.image.url, size: "100x100") %>
+      <p>
+        <%= product.name %>
+        <%= product.price %>
+        <%= product.category.name %>
+        <%= Product.human_state_name(product.state_name) %>
+      </p>
+      <p>
+        <%= link_to "添加到购物车", add_to_cart_product_path(product), method: :post %>
+      </p>
     <% end %>
-  </tbody>
-</table>
+  </div>
+<% end %>
+  
+ <%#= link_to "Edit", edit_product_path(product) %>
+ <%#= link_to "Destroy", product_path(product), method: :delete, remote: true %></td>

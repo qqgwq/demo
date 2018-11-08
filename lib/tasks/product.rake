@@ -14,7 +14,7 @@ namespace :all_products do
         category.products.create(
           :name => Faker::Name.name,
           :remote_image_url => Faker::Avatar.image,
-          price: 67
+          price: (rand(100) + 1) * 10
         )
       end
     end

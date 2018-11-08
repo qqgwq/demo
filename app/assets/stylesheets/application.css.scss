@@ -31,10 +31,20 @@
    background: #FFF;
  }
  #search_result{
-   margin-top: 90px;
-   background: #FFF;
+   margin-top: 54px;
  }
  .show-product{
   margin-top: 90px;
   background: #FFF;
+ }
+
+ #paginate{
+   width:20%;
+ }
+
+ .product{
+   border: 1px solid #ccc;
+   padding: 10px;
+   margin: 31px;
+   float: left;
  }
