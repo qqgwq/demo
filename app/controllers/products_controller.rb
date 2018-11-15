@@ -9,7 +9,7 @@ class ProductsController < ApplicationController
   end
 
   def index
-    @products = Product.search(params[:search]).includes(:category).page(params[:page]).per(10)
+    @products = Product.search(params[:search]).includes(:category).page(params[:page]).per(15)
     respond_to do |format|
       format.html
       format.json { render json: @products }
