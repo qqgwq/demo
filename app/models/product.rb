@@ -63,4 +63,12 @@ class Product < ActiveRecord::Base
       all
     end
   end
+
+  rails_admin do
+    navigation_label '<i class="fa fa-product-hunt" aria-hidden="true"></i>商品'.html_safe
+    weight 2
+    field :name
+    field :price
+    field :category
+  end
 end

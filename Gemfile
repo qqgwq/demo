@@ -39,7 +39,11 @@ gem 'carrierwave'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'rest-client'
-
+gem "sentry-raven"
+gem 'rails_admin', '~> 1.3'
+gem 'grape'
+gem 'grape-entity'
+gem 'jwt'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

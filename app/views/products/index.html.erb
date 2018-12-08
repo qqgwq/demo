@@ -13,3 +13,28 @@
 </div>
 
 <%= link_to 'New Product', new_product_path, remote: true, id: "new_product" %>
+
+<%= form_for Product.new do |f| %>
+
+  <div class="form-group">
+    <%= f.label :Name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="form-group">
+    <%= f.label :Price %>
+    <%= f.text_field :price %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Category %>
+    <%= f.collection_select :category_id, Category.order(:name), :id, :name %>
+  </div>
+
+  <div class="form-group">
+    <%= f.file_field :image %>
+  </div>
+
+  <%= f.submit 'Save' %>
+<% end %>
+
+<#audio id="myAudio" src="/audio/my_audio_file.mp3" loop autoplay controls></audio>

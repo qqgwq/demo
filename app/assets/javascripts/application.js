@@ -17,3 +17,9 @@
 //= require jquery.validate
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+  $('#new_product').click(function(){
+    $('.new_product').toggle()
+  });
+});
