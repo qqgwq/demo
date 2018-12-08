@@ -44,6 +44,7 @@ gem 'rails_admin', '~> 1.3'
 gem 'grape'
 gem 'grape-entity'
 gem 'jwt'
+gem 'puma'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -58,10 +59,12 @@ group :development, :test do
 end
 
 group :development do
-  # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'capistrano'
+  gem 'capistrano-rvm'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano3-puma' 
 end
 
