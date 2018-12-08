@@ -4,7 +4,6 @@ source 'https://gems.ruby-china.com'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.8'
 # Use mysql as the database for Active Record
-gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -66,5 +65,9 @@ group :development do
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
   gem 'capistrano3-puma' 
+end
+
+group :production do
+  gem 'pg', '~> 0.18'
 end
 
