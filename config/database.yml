@@ -13,13 +13,13 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  username: root
-  password:
   socket: /tmp/mysql.sock
 
 development:
   <<: *default
   database: demo_development
+  username: <%= Settings.default[:username] %>
+  password: <%= Settings.default[:password] %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: demo_production
-  username: demo
-  password: <%= ENV['DEMO_DATABASE_PASSWORD'] %>
+  username: <%= Settings.default[:username] %>
+  password: <%= Settings.default[:password] %>
