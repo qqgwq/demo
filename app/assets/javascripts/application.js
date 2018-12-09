@@ -23,3 +23,7 @@ $(document).ready(function(){
     $('.new_product').toggle()
   });
 });
+
+$(document).ready(function() {
+  $("#my_audio").get(0).play();
+});
