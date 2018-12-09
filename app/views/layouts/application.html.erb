@@ -4,23 +4,33 @@
   <title>Demo</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav class="navbar navbar-fixed-top bd-navbar">
+<nav class="navbar navbar-default bd-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/">Navbar</a>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">首页</a>
+    </div>  
     <ul class="nav navbar-nav navbar-right">
       <% if login? %>
-        <li><%= link_to "Logout", "/logout", method: :delete %></li>
+        <li><%= link_to "登出", "/logout", method: :delete %></li>
         <li>
           <%= link_to cart_path(current_cart) do %>
             购物车<i class="fa fa-shopping-cart"></i>(<%= current_cart.cart_items.count %>)
           <% end %>
         </li>
       <% else %>
-        <li><%= link_to "Signup", signup_path %></li>
-        <li><%= link_to "Login", login_path %></li>
+        <li><%= link_to "注册", signup_path %></li>
+        <li><%= link_to "登录", login_path %></li>
+        <li><%= link_to "关于我们", '#' %></li>
       <% end %>
     </ul>
   </div>
