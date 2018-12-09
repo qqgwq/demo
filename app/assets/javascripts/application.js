@@ -27,3 +27,7 @@ $(document).ready(function(){
 $(document).ready(function() {
   $("#my_audio").get(0).play();
 });
+
+$(document).on('page:change', function(){
+  $('#my_audio').play()
+});
