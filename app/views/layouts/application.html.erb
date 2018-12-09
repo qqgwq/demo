@@ -18,23 +18,21 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="/">首页</a>
-    </div>  
-    <ul class="nav navbar-nav navbar-right">
-      <% if login? %>
-        <li><%= link_to "登出", "/logout", method: :delete %></li>
-        <li>
-          <%= link_to cart_path(current_cart) do %>
-            购物车<i class="fa fa-shopping-cart"></i>(<%= current_cart.cart_items.count %>)
-          <% end %>
-        </li>
-      <% else %>
-        <li><%= link_to "注册", signup_path %></li>
-        <li><%= link_to "登录", login_path %></li>
-        <li><%= link_to "关于我们", '#' %></li>
-      <% end %>
-    </ul>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <% if login? %>
+          <li><%= link_to "登出", "/logout", method: :delete %></li>
+        <% else %>
+          <li><%= link_to "注册", signup_path %></li>
+          <li><%= link_to "登录", login_path %></li>
+          <li><%= link_to "关于我们", '#' %></li>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </nav>
+<audio id="myAudio" src="/audio/my_audio_file.mp3" loop autoplay controls hidden></audio>
 <%= yield %>
 </body>
 </html>

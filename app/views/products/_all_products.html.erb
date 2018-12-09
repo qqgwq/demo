@@ -8,9 +8,9 @@
         <%= product.category.name %>
         <%= Product.human_state_name(product.state_name) %>
       </p>
-      <p>
-        <%= link_to "添加到购物车", add_to_cart_product_path(product), method: :post %>
-      </p>
+      # <p>
+      #   <%= link_to "添加到购物车", add_to_cart_product_path(product), method: :post %>
+      # </p>
     <% end %>
   </div>
 <% end %>
