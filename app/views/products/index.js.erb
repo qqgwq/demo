@@ -1,2 +1,0 @@
-$('#search_result').html("<%= escape_javascript(render(partial: 'products/all_products', :locals => {:product => @products})) %>");
-$('#paginate').html("<%= escape_javascript(paginate(@products, :remote => true)) %>");

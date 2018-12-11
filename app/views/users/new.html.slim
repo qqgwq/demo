@@ -13,12 +13,7 @@
               .form-group
                 = f.label :password, class: "control-label"
                 = f.password_field :password, class: "form-control"
-              
-              .form-group
-                = f.radio_button(:gender, "female", checked: true)
-                = f.label(:gender_female, "female")
-                = f.radio_button(:gender, "male")
-                = f.label(:gender_male, "Male")
+            
               .form-group
                 = f.submit "Save", class: "btn btn-success"
 

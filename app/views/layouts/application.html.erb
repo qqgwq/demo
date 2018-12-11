@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Demo</title>
+  <title><%= content_for?(:title) ? content_for(:title) : '招生咨询' %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -21,18 +21,14 @@
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
-        <% if login? %>
-          <li><%= link_to "登出", "/logout", method: :delete %></li>
-        <% else %>
-          <li><%= link_to "注册", signup_path %></li>
-          <li><%= link_to "登录", login_path %></li>
-          <li><%= link_to "关于我们", '#' %></li>
-        <% end %>
+        <li><%= link_to "专业导航" %></li>
+        <li><%= link_to "专业展示" %></li>
+        <li><%= link_to "关于我们", about_path %></li>
       </ul>
     </div>
   </div>
 </nav>
-<audio id="my_audio" src="/audio/my_audio_file.mp3" loop="loop"></audio>
+<audio id="my_audio" src="/audio/my_audio_file.mp3" loop="loop" muted></audio>
 <%= yield %>
 </body>
 </html>
