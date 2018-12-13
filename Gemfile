@@ -44,7 +44,6 @@ gem 'grape-entity'
 gem 'jwt'
 gem 'puma'
 gem 'config'
-gem 'lightbox2-rails'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
