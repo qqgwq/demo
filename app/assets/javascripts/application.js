@@ -15,6 +15,7 @@
 //= require jquery-ui
 //= require bootstrap-sprockets
 //= require jquery.validate
+//= require lightbox
 //= require turbolinks
 //= require_tree .
 
@@ -27,3 +28,16 @@ $(document).ready(function(){
 $(document).on("turbolinks:load",function(){
   document.getElementById("my_audio").play();
 })
+
+// ===== Scroll to Top ==== 
+$(window).scroll(function() {
+  if ($(this).scrollTop() >= 100) {        // If page is scrolled more than 50px
+      $('#back-to-top').fadeIn(1000);    // Fade in the arrow
+  } else {
+      $('#back-to-top').fadeOut(1000);   // Else fade out the arrow
+  }
+});
+$('#back-to-top').click(function() {      // When arrow is clicked
+  $('html, body').animate({scrollTop : 0},500);
+  return false;
+});

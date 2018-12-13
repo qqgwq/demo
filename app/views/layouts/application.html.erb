@@ -8,7 +8,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav class="navbar navbar-default bd-navbar">
+<nav class="navbar navbar-default navbar-fixed-top bd-navbar">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -31,4 +31,7 @@
 <audio id="my_audio" src="/audio/my_audio_file.mp3" loop="loop" muted></audio>
 <%= yield %>
 </body>
+<a href="#top" id="back-to-top" title="Back to top">
+  <i class="fa fa-arrow-circle-o-up"></i>
+</a>
 </html>

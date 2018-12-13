@@ -11,7 +11,7 @@
       <div class="newContent">
         <div class="panelContent">
           <div class="titleContainer">
-            <%= link_to image_tag("timg.jpg", width: '100%'), about_path %>
+            <%= link_to image_tag("primary.jpg", width: '100%'), mechanic_path %>
           </div>
         <div class="titlePanel">
           <div class="titleTitle">
@@ -87,7 +87,7 @@
           热门专业
         </div>
       </div>
-      <div class="panel-body">
+      <div class="panel-body cat">
         <div class="hotContent">
           <div class="col-xs-6">
             <%= link_to image_tag('timg.jpg', width: '100%'), about_path %>
@@ -143,8 +143,32 @@
   </div>
 </div>
 
+<div class="footer">
+  <div class="panel-body">
+    <div class="contact">
+      <div id="mobile"><i class="fa fa-mobile"></i></div>
+      <div id="phone-number">联系方式</div>
+    </div>
+    <div class="chat">
+      <div id="wechat" data-toggle="modal" data-target="#myWechat"><i class="fa fa-wechat"></i></div>
+      <div id="add-wechat">添加微信</div>
+    </div>
+    <div class="qq">
+      <div id="qqImage"><i class="fa fa-qq"></i></div>
+      <div id="qq-number">
+        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1305851004&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=1:1305851004:10" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+    </div>
+  </div>
+</div>
+
+<%= render 'wechat' %>
+
 <script type="text/javascript">
   $(".panelContent").click(function(){
     window.location.href =  $(this).find("a").attr("href");
-  })
+  });
+
+  $('#mobile').click(function(){
+    alert("手机号: 15102895020");
+  });
 </script>

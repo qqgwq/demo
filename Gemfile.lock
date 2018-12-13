@@ -140,6 +140,8 @@ GEM
     execjs (2.7.0)
     faker (1.9.1)
       i18n (>= 0.7)
+    fancybox-rails (0.3.1)
+      railties (>= 3.1.0)
     faraday (0.15.3)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.25)
@@ -187,6 +189,8 @@ GEM
       activerecord
       kaminari-core (= 1.1.1)
     kaminari-core (1.1.1)
+    lightbox2-rails (2.8.2.1)
+      railties (>= 3.1)
     loofah (2.2.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -360,6 +364,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   config
   faker
+  fancybox-rails
   font-awesome-rails
   grape
   grape-entity
@@ -369,6 +374,7 @@ DEPENDENCIES
   jquery-validation-rails
   jwt
   kaminari
+  lightbox2-rails
   pg (~> 0.18)
   pry-rails
   puma

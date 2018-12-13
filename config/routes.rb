@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root 'welcomes#index'
+  get 'mechanic', to: 'welcomes#mechanic'
+  get 'city', to: 'welcomes#city'
   get 'about', to: 'welcomes#about'
   resources :users
   get 'signup', to: "users#new", as: 'signup'
