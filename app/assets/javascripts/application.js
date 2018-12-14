@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require bootstrap-sprockets
+//= require bootstrap-modal
+//= require bootstrap-modalmanager
 //= require jquery.validate
 //= require turbolinks
 //= require_tree .
@@ -39,4 +41,17 @@ $(window).scroll(function() {
 $('#back-to-top').click(function() {      // When arrow is clicked
   $('html, body').animate({scrollTop : 0},500);
   return false;
+});
+
+
+$(document).on("turbolinks:load",function(){
+  $(".detail").click(function(){
+    $(".detail-footer").slideToggle();
+  });
+});
+
+$(document).on("turbolinks:load",function(){
+  $('.hide-data').click(function(){
+    $('.detail-footer').slideToggle()
+  });
 });

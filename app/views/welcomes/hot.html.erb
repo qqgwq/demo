@@ -1,0 +1,34 @@
+<%= content_for :title, '专业导航' %>
+<div class="container">
+  <div class="row">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="hotTitle" style="margin-top: 20%;color:red">
+          热门专业
+        </div>
+      </div>
+      <div class="panel-body cat">
+        <div class="hotContent">
+          <div class="col-xs-6">
+            <%= link_to image_tag('hot/hot_hl.jpg', width: '100%', height: '97px'), nursing_path %>
+            <p class="hotProfession">护理专业</p>
+          </div>
+          <div class="col-xs-6">
+            <%= link_to image_tag('sy/xq.jpg', width: '100%', height: '97px'), about_path %>
+            <p class="hotProfession">学前教育</p>
+          </div>
+        </div>
+        <div class="hotContent">
+          <div class="col-xs-6">
+            <%= link_to image_tag('sy/tlys.jpg', width: '100%', height: '97px'), about_path %>
+            <p class="hotProfession">轨道运输</p>
+          </div>
+          <div class="col-xs-6">
+            <%= link_to image_tag('sy/cp.jpg', width: '100%', height: '97px'), about_path %>
+            <p class="hotProfession">计算机应用</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

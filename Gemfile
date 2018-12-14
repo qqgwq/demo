@@ -44,6 +44,7 @@ gem 'grape-entity'
 gem 'jwt'
 gem 'puma'
 gem 'config'
+gem 'bootstrap-modal-rails'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

@@ -4,6 +4,17 @@ class WelcomesController < ApplicationController
 
   def mechanic
   end
+  
+  def hot
+  end
+  
+  def qingshen
+  end
+
   def about
+  end
+
+
+  def nusring
   end
 end
