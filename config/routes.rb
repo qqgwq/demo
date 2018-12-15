@@ -6,4 +6,9 @@ Rails.application.routes.draw do
   get 'about', to: 'welcomes#about'
 
   get 'nursing', to: 'welcomes#nursing'
+  get 'preschool', to: 'welcomes#preschool'
+  get 'train', to: 'welcomes#train'
+  get 'computer', to: 'welcomes#computer'
+
+  get 'information', to: 'eductions#information'
 end

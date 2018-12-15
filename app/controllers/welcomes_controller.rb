@@ -17,4 +17,13 @@ class WelcomesController < ApplicationController
 
   def nusring
   end
+
+  def preschool
+  end
+
+  def train
+  end
+
+  def computer
+  end
 end
