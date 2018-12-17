@@ -8,7 +8,7 @@ class WelcomesController < ApplicationController
   def hot
   end
   
-  def qingshen
+  def qingsheng
   end
 
   def about
