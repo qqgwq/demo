@@ -55,3 +55,24 @@ $(document).on("turbolinks:load",function(){
     $('.detail-footer').slideToggle()
   });
 });
+
+
+$(document).on("turbolinks:load", function(){
+  $(".see_more").click(function(){
+    var i = $(this).find('i');
+    if ($(".more").is(':visible')) {
+      i.removeClass('fa-angle-double-up').addClass('fa-angle-double-down');
+      $('.more').slideUp(400);
+    } else {
+      i.removeClass('fa-angle-double-down').addClass('fa-angle-double-up');
+      $('.more').slideDown(400);
+    }
+  });
+});
+
+$(document).on("turbolinks:load",function(){
+  $(".see_more").click(function(){
+    $('.find').toggle();
+    $('.second').toggle();
+  });
+});
