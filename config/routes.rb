@@ -11,4 +11,7 @@ Rails.application.routes.draw do
   get 'computer', to: 'welcomes#computer'
 
   get 'information', to: 'eductions#information'
+  get 'info', to: 'eductions#info'
+  get 'school', to: 'eductions#school'
+  get 'dog', to: 'eductions#dog'
 end
